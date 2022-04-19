@@ -412,7 +412,9 @@ def driver(T_I,T,A,cost):
 
     OCR = OverallCompletionRate_OCR(T_I,Final_R)
 
-    totalSatisfactoryRate_TSR *= (assignedApplicants)/(math.sqrt((len(A)-assignedApplicants)**2+(assignedApplicants)**2))
+    # totalSatisfactoryRate_TSR *= (assignedApplicants)/(math.sqrt((len(A)-assignedApplicants)**2+(assignedApplicants)**2))
+    totalSatisfactoryRate_TSR *= (assignedApplicants)/len(A)
+    # totalSatisfactoryRate_TSR = totalSatisfactoryRate_TSR/(assignedApplicants)
 
     # print(completed)
     successRatio_2 = (completed/len(T))*100
